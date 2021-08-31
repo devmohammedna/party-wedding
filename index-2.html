@@ -10,7 +10,7 @@
         content="landing app ,html,template,theme,themeforest,envato ,mobile,one page app template, html5,landing app page">
     <meta name="Author" content="Norhan , PionThemes">
     <meta name="copyright" content="© 2019 wadding All rights reserved ">
-    <link rel="shortcut icon" href="assets/images/logo/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <style>
         @charset "UTF-8";
 
@@ -5521,6 +5521,7 @@
         .navbar>.container,
         .navbar>.container-fluid {
             display: flex;
+            flex-direction: row-reverse;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between
@@ -5701,7 +5702,7 @@
             }
 
             .navbar-expand-lg .navbar-nav {
-                flex-direction: row
+                flex-direction: row-reverse
             }
 
             .navbar-expand-lg .navbar-nav .dropdown-menu {
@@ -27847,8 +27848,8 @@
         }
 
         :root {
-            --color-main: #fa9a7d;
-            --color-secondary: #FFB18B;
+            --color-main: #f7b39f;
+            --color-secondary: #ffd8c5;
             --color-gradient: linear-gradient(var(--gradient-direction), var(--color-main), var(--color-secondary));
             --color-gradient2: linear-gradient(45deg, var(--color-main), var(--color-secondary));
             --color-gradient3: radial-gradient(var(--color-main), var(--color-secondary));
@@ -29290,7 +29291,7 @@
 
         body>#header #navbar .navbar-nav {
             padding: 0 0;
-            margin-left: auto
+
         }
 
         body>#header #navbar .navbar-nav .nav-item .nav-link {
@@ -30651,13 +30652,14 @@
         #fqa-section #accordion .card .card-header h6 {
             margin: 0;
             transition: all .5s ease;
-            max-width: 95%
+            max-width: 95%;
+            float: right;
         }
 
         #fqa-section #accordion .card .card-header h6::before {
             content: '\f078';
             position: absolute;
-            right: 0;
+            left: 0;
             color: var(--color-main);
             font-family: 'Font Awesome 5 Free' !important;
             font-weight: 900 !important
@@ -33717,15 +33719,15 @@
                     aria-label="Toggle navigation"><span></span><span></span><span></span></button>
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="navbar-nav nav nav-pills">
-                        <li class="nav-item"><a class="nav-link" href="#intro-section">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features-section">features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#howItWorking-section">How it works</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#screenshots-section">screenshots</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team-section">team</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#pricing-section">pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#blog-section">blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#fqa-section">fqa</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact-section">contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#intro-section">الصفحة الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features-section">عن المنتج</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#howItWorking-section">كيف يعمل</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#screenshots-section">لقطات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team-section">فريقنا</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pricing-section">عروضنا</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog-section">اخبارنا</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#fqa-section">الاسئلة الشائعة</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact-section">اتصل بنا</a></li>
                     </ul>
                 </div>
             </div>
@@ -33735,9 +33737,11 @@
         <section class="style-2" id="intro-section">
             <div class="jumbotron">
                 <div class="container text-center">
-                    <h1 class="title display-4"> تطبيق فرحتي <small>معكم خطوة بخطوة</small></h1>
-                    <p><a class="btn-secondary" href="#download-section">download now</a><a class="btn-white-secondary"
-                            href="#about-section">Learn More</a></p><img
+                    <img class="lazy logo" style="margin: auto;max-width: 250px;"
+                        data-src="assets/images/logo/logo_white.png" title="wadding" alt="wadding">
+                    <!-- <h1 class="title display-4"> فرحتي <small>معكم لاوقات لا تنسى</small></h1> -->
+                    <p><a class="btn-secondary" href="#download-section">تحميل الان</a><a class="btn-white-secondary"
+                            href="#about-section">تعلم المزيد</a></p><img
                         class="lazy img-fluid app-screen hover_moving_effect m-auto"
                         data-src="assets/images/app-screens/2.png" title="wadding" alt="wadding">
                 </div>
@@ -33746,24 +33750,25 @@
         <section class="style-2" id="features-section">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3>it's all about on of the best<strong>travelling app</strong></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, impedit.</p>
+                    <h3><strong>تنظيم افراح على الاطلاق</strong>انه من افضل تطبيقات</h3>
+                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي ان المحتوى المقروء لصفحة ما سيلهي الفرائ عن التركيز على الشكل
+                        الخارجي للنص</p>
                 </div>
                 <div class="row features-list">
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card">
                             <div class="card-title"><i class="fab fa-d-and-d"></i>
-                                <p>creative Design</p>
+                                <p>تصميم متميز</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-title"><i class="fas fa-thumbs-up"></i>
-                                <p>high resolution</p>
+                                <p>حماية فائقة</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-title"><i class="fas fa-fighter-jet"></i>
-                                <p>Fast Install</p>
+                                <p>دعم سريع</p>
                             </div>
                         </div>
                     </div>
@@ -33772,17 +33777,17 @@
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card">
                             <div class="card-title"><i class="fab fa-d-and-d"></i>
-                                <p>creative Design</p>
+                                <p>سرعة اداء</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-title"><i class="fas fa-thumbs-up"></i>
-                                <p>high resolution</p>
+                                <p>تصميم متجاوب</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-title"><i class="fas fa-fighter-jet"></i>
-                                <p>Fast Install</p>
+                                <p>سهولة الاستخدام</p>
                             </div>
                         </div>
                     </div>
@@ -33792,8 +33797,9 @@
         <section class="small-section style-2" id="video-section">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3>Watch demo video</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, impedit.</p>
+                    <h3>فيديو عنا</h3>
+                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي ان المحتوى المقروء لصفحة ما سيلهي الفرائ عن التركيز على الشكل
+                        الخارجي للنص</p>
                 </div>
                 <div class="video-link"><a data-video-link=" https://www.youtube.com/embed/Q8TXgCzxEnw"
                         href="#video-modal" title="Open Video"><i class="fas fa-play"></i></a></div>
@@ -33802,8 +33808,8 @@
         <section class="style-2" id="howItWorking-section">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3>How is it<strong>working</strong></h3>
-                    <p>4 easy steps to get involved</p>
+                    <h3><strong>يعمل</strong>كيف</h3>
+                    <p>4خطوات فقط لبدأ الرحلة</p>
                 </div>
                 <ul class="row list-unstyled steps">
                     <li class="col-lg-3 col-md-6 col-sm-12">
@@ -33812,7 +33818,7 @@
                         </div>
                         <div class="card">
                             <div class="card-title"><i class="fas fa-store"></i>
-                                <p>open the store</p>
+                                <p>ادخل المتجر</p>
                             </div>
                         </div>
                     </li>
@@ -33822,7 +33828,7 @@
                         </div>
                         <div class="card">
                             <div class="card-title"><i class="fas fa-download"></i>
-                                <p>download the app</p>
+                                <p>حمل التطبيق</p>
                             </div>
                         </div>
                     </li>
@@ -33832,7 +33838,7 @@
                         </div>
                         <div class="card">
                             <div class="card-title"><i class="fas fa-user"></i>
-                                <p>create account</p>
+                                <p>سجل حساب</p>
                             </div>
                         </div>
                     </li>
@@ -33842,7 +33848,7 @@
                         </div>
                         <div class="card">
                             <div class="card-title"><i class="fas fa-thumbs-up"></i>
-                                <p>enjoy !</p>
+                                <p>استمتع برحلتك !</p>
                             </div>
                         </div>
                     </li>
@@ -33853,8 +33859,8 @@
         <section id="screenshots-section">
             <div class="container-fluid">
                 <div class="section-title text-center">
-                    <h3>Creative<strong>screens</strong></h3>
-                    <p>wadding is the most creative design</p>
+                    <h3><strong>مميزة</strong>لقطات</h3>
+                    <p>صمم بجودة عالية</p>
                 </div>
                 <div id="screenshots-carousel-2">
                     <div class="owl-carousel">
@@ -33883,26 +33889,26 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="statistic style-2">
-                            <p class="lead"><i class="fas fa-download"></i><span>downloads</span></p>
+                            <p class="lead"><i class="fas fa-download"></i><span>تحميلات</span></p>
                             <p class="count"><span class="counter" data-from="0" data-to="35">0</span><span>K</span></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="statistic style-2">
-                            <p class="lead"><i class="far fa-smile"></i><span>Happy Clients</span></p>
+                            <p class="lead"><i class="far fa-smile"></i><span>عملائنا السعيدة</span></p>
                             <p class="count"><span class="counter" data-from="0" data-to="2.5">0</span><span>K</span>
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="statistic style-2">
-                            <p class="lead"><i class="fas fa-bookmark"></i><span>Bookmark</span></p>
+                            <p class="lead"><i class="fas fa-bookmark"></i><span>المفضلة</span></p>
                             <p class="count"><span class="counter" data-from="0" data-to="3">0</span><span>K</span></p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="statistic style-2">
-                            <p class="lead"><i class="fas fa-star"></i><span>5 ratting stars</span></p>
+                            <p class="lead"><i class="fas fa-star"></i><span>5 تقييم نجوم</span></p>
                             <p class="count"><span class="counter" data-from="0" data-to="900">0</span></p>
                         </div>
                     </div>
@@ -33926,15 +33932,15 @@
                             data-src="assets/images/clients-section/6.png" title="wadding" alt="wadding"></li>
                 </ul>
             </div>
-        </div> 
+        </div>
 
         <section id="fqa-section">
             <div class="container">
-                <div class="row">
+                <div class="row" style="flex-direction: row-reverse;">
                     <div class="col-md-12">
                         <div class="section-title text-center">
-                            <h3>popular questions<strong>and answers</strong></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                            <h3><strong>الشائعة</strong>الاسئلة</h3>
+                            <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي</p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5 col-md-12"><img class="lazy app-screen hover_moving_effect img-fluid"
@@ -33944,69 +33950,79 @@
                             <div class="card">
                                 <div class="card-header" id="question-0">
                                     <h6 data-target="#collapse-0" data-toggle="collapse" aria-controls="collapse-0"
-                                        aria-expanded="false">What is lorem text</h6>
+                                        aria-expanded="false">ما هو تطبيق فرحتي</h6>
                                 </div>
                                 <div class="collapse" id="collapse-0" data-parent="#accordion"
                                     aria-labelledby="question-0">
                                     <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, impedit.
-                                            Nisi dolorem nihil, libero maiores modi minus sunt accusamus non quasi
-                                            soluta illum voluptatem eaque animi voluptatum at fugit hic.</p>
+                                        <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                                            التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                                            ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما-
+                                            للأحرف عوضاً عن استخدام هنا يوجد محتوى نصي، هنا يوجد محتوى نصي فتجعلها تبدو
+                                            (أي الأحرف) وكأنها نص مقروء.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header" id="question-1">
                                     <h6 data-target="#collapse-1" data-toggle="collapse" aria-controls="collapse-1"
-                                        aria-expanded="false">what is wadding</h6>
+                                        aria-expanded="false">ما الفائدة</h6>
                                 </div>
                                 <div class="collapse" id="collapse-1" data-parent="#accordion"
                                     aria-labelledby="question-1">
                                     <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, impedit.
-                                            Nisi dolorem nihil, libero maiores modi minus sunt accusamus non quasi
-                                            soluta illum voluptatem eaque animi voluptatum at fugit hic.</p>
+                                        <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                                            التركيز على الشكل الخارجي للنص أو شكل توضع
+                                            الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها
+                                            تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً
+                                            عن استخدام هنا يوجد محتوى نصي، هنا يوجد محتوى نصي فتجعلها تبدو (أي الأحرف)
+                                            وكأنها نص مقروء.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header" id="question-2">
                                     <h6 data-target="#collapse-2" data-toggle="collapse" aria-controls="collapse-2"
-                                        aria-expanded="false">how to use the app</h6>
+                                        aria-expanded="false">أين اجده</h6>
                                 </div>
                                 <div class="collapse" id="collapse-2" data-parent="#accordion"
                                     aria-labelledby="question-2">
                                     <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, impedit.
-                                            Nisi dolorem nihil, libero maiores modi minus sunt accusamus non quasi
-                                            soluta illum voluptatem eaque animi voluptatum at fugit hic.</p>
+                                        <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                                            التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.
+                                            ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما-
+                                            للأحرف عوضاً عن استخدام هنا يوجد محتوى نصي، هنا يوجد محتوى نصي فتجعلها تبدو
+                                            (أي الأحرف) وكأنها نص مقروء.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header" id="question-3">
                                     <h6 data-target="#collapse-3" data-toggle="collapse" aria-controls="collapse-3"
-                                        aria-expanded="false">how to connect with the support</h6>
+                                        aria-expanded="false">ما أصله</h6>
                                 </div>
                                 <div class="collapse" id="collapse-3" data-parent="#accordion"
                                     aria-labelledby="question-3">
-                                    <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, impedit.
-                                            Nisi dolorem nihil, libero maiores modi minus sunt accusamus non quasi
-                                            soluta illum voluptatem eaque animi voluptatum at fugit hic.</p>
-                                    </div>
+                                    div class="card-body">
+                                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                                        التركيز على الشكل الخارجي للنص أو شكل توضع
+                                        الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها
+                                        تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً
+                                        عن استخدام هنا يوجد محتوى نصي، هنا يوجد محتوى نصي فتجعلها تبدو (أي الأحرف)
+                                        وكأنها نص مقروء.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
         </section>
         <section id="pricing-section">
             <div class="container text-center">
                 <div class="section-title">
-                    <h3>Pricing<strong>Deals</strong></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <h3><strong>المميزة</strong>عروضنا</h3>
+                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي</p>
                 </div>
                 <div class="packages style-2">
                     <div class="row">
@@ -34088,11 +34104,13 @@
         </section>
         <section class="small-section style-2" id="download-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-12">
+                <div class="row" style="flex-direction: row-reverse;">
+                    <div class="col-lg-8 col-md-12" style="text-align:right;">
                         <div class="section-title">
-                            <h2>download now</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, impedit.</p>
+                            <h2>تحميل الان</h2>
+                            <p>هناك حقيقة مثبتة منذ زمن طويل وهي ان المحتوى المقروء لصفحة ما سيلهي الفرائ عن التركيز على
+                                الشكل
+                                الخارجي للنص</p>
                         </div>
                         <div class="download-btns"><a class="btn-white-gradient" href="#!"><i
                                     class="fab fa-google-play"></i>Google Play</a><a class="btn-white-gradient"
@@ -34108,13 +34126,15 @@
         <section class="style-2 small-section pt-0" id="contact-section">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3>Get in<strong>touch</strong></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <h3><strong>بنا</strong>اتصل</h3>
+                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي ان المحتوى المقروء لصفحة ما سيلهي الفرائ عن التركيز على الشكل
+                        الخارجي للنص</p>
                 </div>
                 <div class="contacts-info m-auto">
                     <ul class="list-unstyled list-inline info">
                         <li class="list-inline-item"><i class="fas fa-phone"></i><span>+124567896</span></li>
-                        <li class="list-inline-item"><i class="fas fa-envelope"></i><span>Support@wadding.Com</span></li>
+                        <li class="list-inline-item"><i class="fas fa-envelope"></i><span>Support@wadding.Com</span>
+                        </li>
                         <li class="list-inline-item"><i class="fas fa-map-marker-alt"></i><span>123A, Mainbridge,
                                 USA</span></li>
                     </ul>
@@ -34158,7 +34178,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12"><button class="btn-gradient" type="submit"><i
-                                    class="fab fa-telegram-plane"></i><span>send</span></button></div>
+                                    class="fab fa-telegram-plane"></i><span>ارسل</span></button></div>
                     </form>
                     <div class="form-messages">
                         <div class="alert"></div>
@@ -34199,10 +34219,11 @@
                 <li class="list-inline-item"><a href="#!"><i class="fab fa-google-plus-g"></i></a></li>
             </ul>
             <div class="copyright p-3 text-center">
-                <p class="m-0">Designed by<a href="https://themeforest.net/user/pionthemes/portfolio">MMB Technology</a>Copy Rights
+                <p class="m-0">Designed by<a href="https://themeforest.net/user/pionthemes/portfolio">MMB
+                        Technology</a>Copy Rights
                     Farhaty 2021<a <="" div="">
                     </a></p>
-               
+
             </div>
             <div id="top-btn">
                 <p><i class="gradient-text fas fa-chevron-up"></i></p>
